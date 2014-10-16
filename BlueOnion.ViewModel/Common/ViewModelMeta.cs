@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Humanizer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-using Humanizer;
 
-namespace ViewModel
+namespace BlueOnion.ViewModel.Common
 {
     public static class ViewModelMeta
     {

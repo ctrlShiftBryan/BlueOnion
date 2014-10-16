@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Linq;
 
-namespace ViewModel
+namespace BlueOnion.ViewModel.Common
 {
     public class ListWithColumns<T> : System.Collections.Generic.List<T>
     {

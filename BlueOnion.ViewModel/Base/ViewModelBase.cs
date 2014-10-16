@@ -1,9 +1,11 @@
 ﻿
-using BlueOnion.ViewModel.DTO.PageInfo;
+using BlueOnion.ViewModel.Common;
+using BlueOnion.ViewModel.Dto;
 using BlueOnion.ViewModel.Interfaces;
 using System.Collections.Generic;
 
-namespace ViewModel
+
+namespace BlueOnion.ViewModel
 {
     public abstract class ViewModelBase<DTO, DDTO, TId> : ViewModelNonGenericBase, IViewModelBase<DTO, DDTO, TId>
         where DTO : class, IDto<TId>, new()

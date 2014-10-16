@@ -1,5 +1,5 @@
 ﻿
-namespace ViewModel
+namespace BlueOnion.ViewModel.Common
 {
     /// <summary>
     /// Able to apply a specific binding to the property, rather than binding on the type

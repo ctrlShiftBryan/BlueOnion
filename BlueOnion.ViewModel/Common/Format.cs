@@ -1,4 +1,4 @@
-﻿namespace ViewModel
+﻿namespace BlueOnion.ViewModel.Common
 {
     public class Format
     {

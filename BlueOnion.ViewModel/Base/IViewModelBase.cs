@@ -1,10 +1,11 @@
 
 using BlueOnion.Domain.Interfaces;
+using BlueOnion.ViewModel.Common;
 using BlueOnion.ViewModel.Interfaces;
 using System;
 using System.Collections.Generic;
 
-namespace ViewModel
+namespace BlueOnion.ViewModel
 {
     public interface IViewModelBase<DTO, DDTO, TId>
         where DTO : class, IDto<TId>

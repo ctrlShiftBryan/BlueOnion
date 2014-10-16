@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="AutoMapper\ConfigMapperPartial.cs" />
     <Compile Include="AutoMapper\ConfigMapper.cs" />
-    <Compile Include="AutoMapper\Mappings\PageInfoMapping.cs" />
+    <Compile Include="AutoMapper\Common\PageInfoMapping.cs" />
     <Compile Include="Base\DTOBase.cs" />
     <Compile Include="Base\IViewModelBase.cs" />
     <Compile Include="Base\ViewModelBase.cs" />
@@ -74,8 +74,9 @@
     <Compile Include="Common\SimpleModelState.cs" />
     <Compile Include="Common\SortAttribute.cs" />
     <Compile Include="Common\ViewModelMeta.cs" />
-    <Compile Include="DTO\NavigationItem.cs" />
+    <Compile Include="DTO\NavigationItemDto.cs" />
     <Compile Include="DTO\PageInfo\PageInfoDto.cs" />
+    <Compile Include="DTO\User\UserDto.cs" />
     <Compile Include="Interfaces\IDomainServices.cs" />
     <Compile Include="Interfaces\IDto.cs" />
     <Compile Include="Interfaces\IGenericQueryService.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AutoMapper\Mappings\" />
     <Folder Include="Interfaces\Services\" />
   </ItemGroup>
   <ItemGroup>

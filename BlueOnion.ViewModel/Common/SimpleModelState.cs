@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ViewModel
+namespace BlueOnion.ViewModel.Common
 {
     public class SimpleModelState
     {

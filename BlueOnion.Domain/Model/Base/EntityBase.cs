@@ -5,6 +5,7 @@ namespace BlueOnion.Domain.Model.Base
 {
     /// <summary>
     /// The base model for everything with an Id, Created and Created by.
+    /// Entities do not get scaffolded. That are contained by Aggregate Root objects
     /// </summary>
     /// <typeparam name="T">The type of the Id</typeparam>
     public class EntityBase<T> : IEntityBase<T>, ICreateable

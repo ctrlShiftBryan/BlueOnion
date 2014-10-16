@@ -1,8 +1,7 @@
-﻿using BlueOnion.ViewModel.Base;
-using BlueOnion.ViewModel.Interfaces;
+﻿using BlueOnion.ViewModel.Interfaces;
 using System;
 
-namespace BlueOnion.ViewModel.DTO.PageInfo
+namespace BlueOnion.ViewModel.Dto
 {
     public class PageInfoDto : DTOBase, IDto<Guid>
     {

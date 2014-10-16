@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ViewModel
+namespace BlueOnion.ViewModel.Common
 {
     public class KOMapping
     {

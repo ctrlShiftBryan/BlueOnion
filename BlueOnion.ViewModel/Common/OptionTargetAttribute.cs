@@ -1,5 +1,5 @@
 ﻿
-namespace ViewModel
+namespace BlueOnion.ViewModel.Common
 {
     [System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple = false)]
     public class OptionTargetAttribute : System.Attribute

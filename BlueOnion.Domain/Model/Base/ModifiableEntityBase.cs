@@ -4,7 +4,7 @@ using System;
 namespace BlueOnion.Domain.Model.Base
 {
     /// <summary>
-    /// A base model with modiefied and deleted dates.
+    /// A entity model with modified and deleted dates.
     /// </summary>
     /// <typeparam name="T">The type for the Id</typeparam>
     public class ModifiableEntityBase<T> : EntityBase<T>, IModifiable

@@ -4,6 +4,9 @@ using System;
 
 namespace BlueOnion.Domain.Model
 {
+    /// <summary>
+    /// The basic user
+    /// </summary>
     public class User: AggregateRoot<Guid>, IUser<Guid>
     {
         private string _userName;

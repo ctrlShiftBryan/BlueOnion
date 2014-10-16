@@ -1,13 +1,14 @@
 ﻿
 using BlueOnion.Domain.Interfaces;
-using BlueOnion.ViewModel.DTO;
+using BlueOnion.ViewModel.Common;
+using BlueOnion.ViewModel.Dto;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net;
 
 
-namespace ViewModel
+namespace BlueOnion.ViewModel
 {
     public abstract class ViewModelNonGenericBase
     {
@@ -24,14 +25,14 @@ namespace ViewModel
             FormControlClasses = "form-group col-sm-6 col-md-4 col-lg-3";
             _canDelete = true;
             //User = new Use();
-            var manageSubNav = new List<NavigationItem>
+            var manageSubNav = new List<NavigationItemDto>
             {
-                new NavigationItem { DisplayName = "Address", CssClass = "", Url = "/HiltonWebPim2014/DedupAddress"},
-                new NavigationItem { DisplayName = "Individuals", CssClass = "", Url = "/HiltonWebPim2014/DedupContactsIndividualNameDuplicate" },
-                new NavigationItem { DisplayName = "Entities", CssClass = "", Url = "/HiltonWebPim2014/DuplicateEntity"},
+                new NavigationItemDto { DisplayName = "Address", CssClass = "", Url = "/HiltonWebPim2014/DedupAddress"},
+                new NavigationItemDto { DisplayName = "Individuals", CssClass = "", Url = "/HiltonWebPim2014/DedupContactsIndividualNameDuplicate" },
+                new NavigationItemDto { DisplayName = "Entities", CssClass = "", Url = "/HiltonWebPim2014/DuplicateEntity"},
             };
 
-            NavigationItem authenticationNavItem;
+            //NavigationItemDto authenticationNavItem;
             //if (HttpContext.Current.User.Identity.IsAuthenticated)
             //    authenticationNavItem = new NavigationItem
             //    {
@@ -47,9 +48,9 @@ namespace ViewModel
             //        Url = ""
             //    };
 
-            NavigationItems = new List<NavigationItem>
+            NavigationItems = new List<NavigationItemDto>
             {
-                new NavigationItem {DisplayName = "Users", CssClass = "fa-wrench", Url = "/Users"},
+                new NavigationItemDto {DisplayName = "Users", CssClass = "fa-wrench", Url = "/Users"},
             };
 
 
@@ -67,7 +68,7 @@ namespace ViewModel
         public bool LeaveOpenOnAjaxSuccess { get; set; }
         public int StatusCode { get; set; }
         public KOMapping KOMapping { get; set; }
-        public List<NavigationItem> NavigationItems { get; set; }
+        public List<NavigationItemDto> NavigationItems { get; set; }
         public List<string> Meta { get; set; }
         public List<string> OnlyValidateFields { get; set; }
         public object Grid { get; set; }

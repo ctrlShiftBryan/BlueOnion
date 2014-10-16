@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{29E02103-2377-4B47-BBEE-D79FFB0B1B1B}</ProjectGuid>
+    <ProjectGuid>{ACDEE787-D6E2-4681-8005-5303B9939585}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BlueOnion.Domain</RootNamespace>
-    <AssemblyName>BlueOnion.Domain</AssemblyName>
+    <RootNamespace>BlueOnion.Repository</RootNamespace>
+    <AssemblyName>BlueOnion.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,22 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IAggregateRoot.cs" />
-    <Compile Include="Interfaces\ICreatable.cs" />
-    <Compile Include="Interfaces\IEntityBase.cs" />
-    <Compile Include="Interfaces\IModifiable.cs" />
-    <Compile Include="Interfaces\IDeletable.cs" />
-    <Compile Include="Interfaces\IUser.cs" />
-    <Compile Include="Model\Base\AggregateRoot.cs" />
-    <Compile Include="Model\Base\ModifiableEntityBase.cs" />
-    <Compile Include="Model\Base\EntityBase.cs" />
-    <Compile Include="Model\Common\PageInfo.cs" />
-    <Compile Include="Model\User\Role.cs" />
-    <Compile Include="Model\User\User.cs" />
-    <Compile Include="Model\User\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

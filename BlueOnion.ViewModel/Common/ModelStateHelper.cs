@@ -1,4 +1,5 @@
-﻿//using System.Linq;
+﻿//TODO Move to MVC
+//using System.Linq;
 //using System.Web.Mvc;
 
 //namespace ViewModel

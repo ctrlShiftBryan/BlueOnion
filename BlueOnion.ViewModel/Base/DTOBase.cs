@@ -1,7 +1,7 @@
 ﻿
-using ViewModel;
+using BlueOnion.ViewModel.Common;
 
-namespace BlueOnion.ViewModel.Base
+namespace BlueOnion.ViewModel
 {
     public class DTOBase
     {
