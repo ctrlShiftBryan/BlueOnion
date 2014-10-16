@@ -61,6 +61,7 @@
     <Compile Include="Base\ViewModelBase.cs" />
     <Compile Include="Base\ViewModelNonGenericBase.cs" />
     <Compile Include="Common\BindingAttribute.cs" />
+    <Compile Include="Common\ListWithPageInfo.cs" />
     <Compile Include="Common\ColumnData.cs" />
     <Compile Include="Common\Format.cs" />
     <Compile Include="Common\EtUtilHelper.cs" />
