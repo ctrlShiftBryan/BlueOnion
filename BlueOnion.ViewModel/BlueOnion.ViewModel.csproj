@@ -81,6 +81,10 @@
     <Compile Include="Interfaces\IDomainServices.cs" />
     <Compile Include="Interfaces\IDto.cs" />
     <Compile Include="Interfaces\IGenericQueryService.cs" />
+    <Compile Include="Interfaces\INonAGRepositoriesWrapper.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\ServiceQueryParameters.cs" />
+    <Compile Include="Interfaces\IRepositoriesWrapper.cs" />
     <Compile Include="Interfaces\IViewModelServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
