@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueOnion.ViewModel", "Blue
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueOnion.Repository", "BlueOnion.Repository\BlueOnion.Repository.csproj", "{ACDEE787-D6E2-4681-8005-5303B9939585}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueOnion.Service", "BlueOnion.Service\BlueOnion.Service.csproj", "{533F8CBE-FC78-4290-AEF6-BF0309465020}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{ACDEE787-D6E2-4681-8005-5303B9939585}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACDEE787-D6E2-4681-8005-5303B9939585}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACDEE787-D6E2-4681-8005-5303B9939585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{533F8CBE-FC78-4290-AEF6-BF0309465020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{533F8CBE-FC78-4290-AEF6-BF0309465020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{533F8CBE-FC78-4290-AEF6-BF0309465020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{533F8CBE-FC78-4290-AEF6-BF0309465020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
