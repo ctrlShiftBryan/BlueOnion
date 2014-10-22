@@ -1,6 +1,5 @@
 ﻿using BlueOnion.Domain.Interfaces;
 using BlueOnion.Repository.Interfaces;
-using BlueOnion.Service.Interfaces;
 using BlueOnion.ViewModel;
 using BlueOnion.ViewModel.Interfaces;
 
@@ -16,7 +15,7 @@ namespace BlueOnion.Service.Base
     /// <typeparam name="VM">The View Model</typeparam>
     /// <typeparam name="DTO">The Summary DTO</typeparam>
     /// <typeparam name="DDTO">The Detail DTO</typeparam>
-    public class ViewModelServiceBase<AR, VM, DTO, DDTO, TId> : IServiceBase
+    public class ViewModelServiceBase<AR, VM, DTO, DDTO, TId> 
         where AR : class, IAggregateRoot<TId>, new()
         where VM : IViewModelBase<DTO, DDTO, TId>, new()
         where DTO : class,  IDto<TId>, new()

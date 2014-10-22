@@ -78,11 +78,16 @@
     <Compile Include="DTO\NavigationItemDto.cs" />
     <Compile Include="DTO\PageInfo\PageInfoDto.cs" />
     <Compile Include="DTO\User\UserDto.cs" />
+    <Compile Include="Interfaces\ICommandServiceBase.cs" />
+    <Compile Include="Interfaces\IDomainCommandService.cs" />
+    <Compile Include="Interfaces\IDomainQueryService.cs" />
+    <Compile Include="Interfaces\IDomainQueryServiceBase.cs" />
     <Compile Include="Interfaces\IDomainServices.cs" />
     <Compile Include="Interfaces\IDto.cs" />
     <Compile Include="Interfaces\IGenericQueryService.cs" />
     <Compile Include="Interfaces\INonAGRepositoriesWrapper.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IUtilityService.cs" />
     <Compile Include="Interfaces\ServiceQueryParameters.cs" />
     <Compile Include="Interfaces\IRepositoriesWrapper.cs" />
     <Compile Include="Interfaces\IViewModelServices.cs" />
