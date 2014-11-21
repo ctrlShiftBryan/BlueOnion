@@ -8,6 +8,6 @@ namespace BlueOnion.Repository.Common
     /// </summary>
     public partial class BlueOnionContext : DbContext
     {
-        public virtual DbSet<User> AccommodationLevels { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

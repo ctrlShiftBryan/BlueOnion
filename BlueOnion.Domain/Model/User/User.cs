@@ -1,6 +1,7 @@
 ﻿using BlueOnion.Domain.Interfaces;
 using BlueOnion.Domain.Model.Base;
 using System;
+using System.Collections.Generic;
 
 namespace BlueOnion.Domain.Model
 {
@@ -27,5 +28,8 @@ namespace BlueOnion.Domain.Model
             get { return _userName; }
             set { _userName = value; }
         }
+
+        public virtual ICollection<UserRole> UserRoles { get; set; }
+
     }
 }
