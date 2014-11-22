@@ -1,0 +1,76 @@
+﻿@using System.Collections
+@using BlueOnion.ViewModel
+@using BlueOnion.MVC.Common
+
+@helper HtmlId()
+{@Html.GetPageHelper().ViewData.TemplateInfo.HtmlFieldPrefix.Replace(".", "_")}}
+@helper UnobtrusiveValidationAttributes()
+{
+    foreach (var v in Html.GetPageHelper().GetUnobtrusiveValidationAttributes(@Html.GetPageHelper().ViewData.TemplateInfo.HtmlFieldPrefix, Html.GetPageHelper().ViewData.ModelMetadata))
+    {
+        if (v.Key != null)
+        {
+            @v.Key @:="@v.Value"
+        }
+
+    }
+}
+@helper GetClasses()
+{
+    foreach (var a in System.Web.Mvc.HtmlHelper.AnonymousObjectToHtmlAttributes(Html.GetPageHelper().ViewData["htmlAttributes"]).Where(x => x.Key == "class"))
+    {
+        @String.Format("{0} ", a.Value)
+    }
+}
+@helper GetHtmlAttributesAsAtrrbiute(string key)
+{
+    foreach (var a in System.Web.Mvc.HtmlHelper.AnonymousObjectToHtmlAttributes(Html.GetPageHelper().ViewData["htmlAttributes"]).Where(x => x.Key == key))
+    {
+        @String.Format("\"{0}\"=\"{1}\"", key, a.Value)
+    }
+}
+@helper GetHtmlAttributesAsKOBindings()
+{
+    foreach (var a in System.Web.Mvc.HtmlHelper.AnonymousObjectToHtmlAttributes(Html.GetPageHelper().ViewData["htmlAttributes"]).Where(x => x.Key.Contains("KOBinding")))
+    {
+        @String.Format(", {0} ", a.Value)
+    }
+}
+@helper GetHtmlAttributeValue(string key)
+{
+    @String.Format("{0}", Html.GetPageHelper().ViewData[key])
+}
+@helper RenderOptions()
+{
+    var items = (SelectListDTO)Html.GetPageHelper().ViewData["options"];
+    if (items != null && items.Items != null && items.Items.Count() > 0)
+    {
+        foreach (var option in ((SelectListDTO)Html.GetPageHelper().ViewData["options"]).Items)
+        {
+            <option value="@option.Value" @(option.Selected ? "selected=selected" : "")>@option.Text</option>
+        }
+    }
+}
+@helper RenderSelectOptions()
+{
+    var viewData = Html.GetPageHelper().ViewData;
+    var items = viewData["Items"] as IEnumerable;
+    var dataValueField = viewData["DataValueField"].ToString();
+    var dataTextField = viewData["DataTextField"].ToString();
+    var listItems = items.Cast<object>().Select(item =>
+    {
+        var value = EtUtilHelper.Eval(item, dataValueField);
+        return new System.Web.Mvc.SelectListItem
+        {
+            Value = value,
+            Text = EtUtilHelper.Eval(item, dataTextField),
+        };
+    });
+
+    foreach (var option in listItems)
+    {
+        <option value="@option.Value" @(option.Selected ? "selected=selected" : "")>@option.Text</option>
+    }
+
+
+}
