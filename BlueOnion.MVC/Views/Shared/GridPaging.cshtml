@@ -1,0 +1,52 @@
+﻿  <!-- ko with: $root.PageInfo -->
+<ul class="pagination">
+    <li data-bind="css: { 'disabled' : !HasPreviousPage() }">
+        <a data-bind="" class="first"><i class="fa fa-angle-double-left brand-info"></i><span>&nbsp;First</span></a>
+    </li>
+
+    <li data-bind="css: { 'disabled' : !HasPreviousPage() }">
+        <a data-bind="" class="prev"><i class="fa fa-angle-left brand-info"></i><span>&nbsp;Prev</span></a>
+    </li>
+
+    <li data-bind="css: { 'active' : PageNumber() == 1 }">
+        <a data-bind="text: Page1" class="page">1</a>
+    </li>
+
+    <li data-bind="css: { 'active' : PageNumber() == 2 }, hidden: Page2() == ''">
+        <a data-bind="text: Page2" class="page">2</a>
+    </li>
+    <li data-bind="css: { 'active' : (PageNumber() > 2 &&  PageNumber() < PageCount() - 1) || (PageNumber() == 3 &&  PageCount() < 5)}, hidden: Page3() == ''">
+        <a data-bind="text: Page3" class="page">3</a>
+    </li>
+    <li data-bind="css: { 'active' : (PageNumber() == PageCount() - 1 && PageCount() >= 5) || (PageNumber() == 4 && PageCount() < 5)}, hidden: Page4() == ''">
+        <a data-bind="text: Page4" class="page">4</a>
+    </li>
+    <li data-bind="css: { 'active' : PageNumber() == PageCount() }, hidden: Page5() == ''">
+        <a data-bind="text: Page5" class="page">5</a>
+    </li>
+    <li data-bind="css: { 'disabled' : !HasNextPage() }">
+        <a data-bind="" class="next"><span>Next&nbsp;</span><i class="fa fa-angle-right brand-info"></i></a>
+    </li>
+    <li data-bind="css: { 'disabled' : !HasNextPage() }">
+        <a data-bind="" class="last"><span>Last&nbsp;</span><i class="fa fa-angle-double-right brand-info"></i></a>
+    </li>
+</ul>
+<!-- /ko -->
+
+<div data-bind="with: Grid" class="pagination">
+    <select class="form-control page-size" data-bind="value: pageSize">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+</div>
+<div class="pagination pagination-pageszdesc">
+    <span>Items per page</span>
+</div>
+
+<div data-bind="with: Grid" class="pagination pull-right">
+    <!-- ko if: totalRows() > 0 -->
+    <p><span data-bind="text: firstItemIndex"></span> - <span data-bind="text: lastItemIndex"></span> of <span data-bind="text: totalRows"></span> items</p>
+    <!-- /ko -->
+</div>

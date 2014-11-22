@@ -169,6 +169,7 @@
     <Compile Include="Controllers\Base\NoAuthBaseController.cs" />
     <Compile Include="Controllers\Base\ODataControllerBase.cs" />
     <Compile Include="Controllers\Base\WebApiBase.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Filters\AuthorizationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -179,6 +180,22 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="App_Code\ETUtil.cshtml" />
+    <Content Include="Views\Shared\CustomTab.cshtml" />
+    <Content Include="Views\Shared\DataGridRow.cshtml" />
+    <Content Include="Views\Shared\DeleteConfirm.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\FormControls.cshtml" />
+    <Content Include="Views\Shared\FormHeader.cshtml" />
+    <Content Include="Views\Shared\GridPaging.cshtml" />
+    <Content Include="Views\Shared\LeftFormControls.cshtml" />
+    <Content Include="Views\Shared\ListButtons.cshtml" />
+    <Content Include="Views\Shared\ListHeader.cshtml" />
+    <Content Include="Views\Shared\MenuItems.cshtml" />
+    <Content Include="Views\Shared\_DialogHolder.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LeftNav.cshtml" />
+    <Content Include="Views\Shared\_ListHeaderForm.cshtml" />
+    <Content Include="Views\Shared\_TopNav.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -191,6 +208,7 @@
     <Folder Include="Content\" />
     <Folder Include="Controllers\WebApi\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlueOnion.Domain\BlueOnion.Domain.csproj">

@@ -1,0 +1,39 @@
+﻿@model BlueOnion.ViewModel.ViewModelNonGenericBase
+<div id="dt_grid">
+    <div>
+        <div class="row list-header fg-filters">
+            @Html.Partial("_ListHeaderForm")
+        </div>
+        <div class="table-holder table-responsive table-x-scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <!-- ko foreach: Columns -->
+                        <!-- ko if: IsHidden() == false -->
+                        <th>
+                            <!-- ko if: DisableSort() -->
+                            <span data-bind="text: DisplayName"></span>
+                            <!-- /ko -->
+                            <!-- ko ifnot: DisableSort() -->
+                            <a href="javascript:void(0)" data-bind="text: DisplayName, attr: {'data-column-name': SortColumn} " class="column-heading"></a>
+                            <!-- /ko -->
+                            <span></span>
+                        </th>
+                        <!-- /ko -->
+                        <!-- /ko -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-bind="visible: $root.IsTableLoading"><td colspan="100"><i class="fa fa-refresh fa-spin"></i> Loading</td></tr>
+                    <!-- ko foreach: List-->
+                    @Html.Partial("DataGridRow")
+                    <!-- /ko -->
+                    <tr data-bind="visible: List().length === 0 && $root.IsTableLoading() == false"><td colspan="100">No Results</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-container">
+            @Html.Partial("GridPaging")
+        </div>
+    </div>
+</div>

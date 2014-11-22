@@ -1,0 +1,33 @@
+﻿@model BlueOnion.ViewModel.ViewModelNonGenericBase
+
+@helper ShowNav(List<NavigationItem> navigationItems)
+{
+    <ul>
+        @foreach (var navItem in navigationItems)
+        {
+            var hasSubNav = navItem.SubNav != null;
+            <li class="@(HttpContext.Current.Request.RawUrl == navItem.Url ? "active" : "")">
+                @if (String.IsNullOrEmpty(navItem.CssClass))
+                {
+                    <a href="@(hasSubNav ? "#" : navItem.Url)">@navItem.DisplayName</a>
+                }
+                else
+                {
+                    <a href="@(hasSubNav ? "#" : navItem.Url)"><i class="fa fa-lg fa-fw @navItem.CssClass"></i> <span class="menu-item-parent">@navItem.DisplayName</span></a>
+                }
+                @if (hasSubNav)
+                {
+                    @ShowNav(navItem.SubNav)
+                }
+            </li>
+        }
+    </ul>
+}
+
+<div class="aside" id="left-panel">
+    <div id="left-nav" class="nav1">
+        @ShowNav(Model.NavigationItems)
+    </div>
+    <div style="padding-left: 12px; color: #a8a8a8;">User: <span>@Model.User.UserName</span></div>
+    <span class="minifyme" title="Expand"> <i class="fa fa-arrow-circle-left hit"></i></span>
+</div>

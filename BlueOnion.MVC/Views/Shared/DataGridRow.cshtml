@@ -1,0 +1,14 @@
+﻿@model BlueOnion.ViewModel.ViewModelNonGenericBase
+<tr>
+    @foreach (var c in Model.Columns)
+    {
+        <td data-bind="visible: @Html.Raw((!c.IsHidden).ToString().ToLower())" data-format="@c.Format.FormatString">
+            <a class="click-cell" href="#/view/2" data-bind="href: '#/view/' + Id()">
+                <span data-bind="@c.Format.Binding: @Html.Raw(c.ColumnName)"></span>
+            </a>
+        </td>
+    }
+    <td class="table-filter-col4" style="text-align: right; vertical-align: middle;">
+        <a class="btn btn-default btn-sm filter-remove"><i class="fa fa-trash-o text-danger"></i></a>
+    </td>
+</tr>

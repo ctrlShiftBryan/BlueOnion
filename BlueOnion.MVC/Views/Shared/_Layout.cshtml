@@ -1,0 +1,127 @@
+﻿@using System.Configuration
+@using System.Web.Optimization
+@using BlueOnion.MVC.Common
+@using Humanizer
+
+@model BlueOnion.ViewModel.ViewModelNonGenericBase
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hilton PiM - @Model.Title.Humanize(LetterCasing.Title)</title>
+    @*@Styles.Render("~/Content/css")*@
+    <link rel="stylesheet" type="text/css" href="/HiltonWebPim2014/Content/bootstrap/bootstrap.css" />
+    @*<script src="http://localhost:35729/livereload.js"></script>*@
+    <script type="text/javascript">  window.appnamespace = 'dtnet';</script>
+    <!-- Version @ConfigurationManager.AppSettings["BuildVersion"]-->
+</head>
+    <body class="hideUnbound">
+        <div id="loading" data-bind="visible: $root.IsLoading"></div>
+        
+        @if (!Model.HideNav)
+        {
+            @Html.Partial("_TopNav")
+            @Html.Partial("_LeftNav")
+
+        }
+        <div class="body-content container-fluid">
+            @if (Model.HasAlerts)
+            {
+                <div class="row">
+                    <div class="alerts-holder col-xs-12">
+                        <!-- ko foreach: Alerts -->
+                        <div class="alert" data-bind="css: Type, slideAlert: IsVisible">
+                            <button type="button" class="close" aria-hidden="true">&times;</button>
+                            <span data-bind="html: Message"></span>
+                        </div>
+                        <!-- /ko -->
+                    </div>
+                </div>
+            }
+            @if (Model.HasDialog)
+            {
+                <div class="row">
+                    <div class="modalform-holder col-xs-12">
+                        <div class="modal-content main-modal-form">
+                            <div class="modal-body">
+                                @Html.Partial("FormHeader")
+                                <div class="close-holder">
+                                    <a class="  dialog-close pull-right" data-dismiss="modal">
+                                        <img src="~/Content/img/close-dialog.png" />
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 form-holder">
+                                        <div class="row form-header">
+                                            <div class="col-sm-12">
+                                                <div class="row">
+                                                    <ul class="nav nav-tabs" data-bind="foreach: $root.FormTabs">
+                                                        <li class="form-tab-nav" data-bind="css: { active: $index() == $root.ActiveTab(), 'text-danger': ErrorCount() > 0  }, hidden: Hidden">
+                                                            <a href="javascript:void(0)">
+
+                                                                @Html.Partial("CustomTab")
+                                                                <i data-bind="visible: ErrorCount() > 0" class="fa fa-circle text-danger indicator-dot"></i>
+                                                                <i data-bind="visible: ChangeCount() > 0 && ErrorCount() == 0" class="fa fa-circle text-info indicator-dot"></i>
+                                                                <span data-bind="html: Text, css: { 'text-danger': ErrorCount() > 0  }"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @RenderSection("Dialog")
+                                        <div class="row form-nav">
+                                            <div class="pull-left controls">
+                                                @Html.Partial("LeftFormControls")
+                                            </div>
+                                            <div class="pull-right controls">
+                                                @Html.Partial("FormControls")
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            @RenderBody()
+            @RenderSection("Modal", false)
+            <!-- Modal -->
+            <div class="modal fade" id="conflictModal" tabindex="-1" role="dialog" aria-labelledby="Conflict Modal" aria-hidden="true" >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+
+                        </div>
+                        <div class="modal-body">
+                            <h3>Warning</h3>
+                            <p>
+                                The record you attempted to edit was modified by another user after you opened it. Would you like to discard your changes enabling you to reopen the record and view the changes or overwrite the unseen changes?
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" id="btn-conflict-discard">Discard your changes</button>
+                            <button type="button" class="btn btn-default" id="btn-conflict-overwrite">Overwrite unseen changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @Html.Partial("DeleteConfirm")
+        </div>
+        @Scripts.Render("~/bundles/js")
+        @RenderSection("Scripts")
+        @*<script src="http://localhost:35729/livereload.js"></script>*@
+        <script type="text/javascript">
+            (function (acrl, $) {
+                window.dtnet.rooturl = '@Html.Raw(RazorUtil.GetBaseURL())/';
+            }(window.dtnet = window.dtnet || {}, jQuery));
+        </script>
+    </body>
+
+
+
+</html>
