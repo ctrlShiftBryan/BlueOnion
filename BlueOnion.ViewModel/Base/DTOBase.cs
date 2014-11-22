@@ -3,7 +3,7 @@ using BlueOnion.ViewModel.Common;
 
 namespace BlueOnion.ViewModel
 {
-    public class DTOBase
+    public class DtoBase
     {
         [Hidden]
         public string ClientId { get; set; }

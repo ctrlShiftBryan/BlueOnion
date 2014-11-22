@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using BlueOnion.Domain.Model;
-using BlueOnion.ViewModel.Dto;
 
 namespace BlueOnion.ViewModel.AutoMapper
 {

@@ -1,6 +1,6 @@
 ﻿namespace BlueOnion.ViewModel
 {
-    public class SelectItemDTO
+    public class SelectItemDto
     {
         public string Value { get; set; }
         public string Text { get; set; }

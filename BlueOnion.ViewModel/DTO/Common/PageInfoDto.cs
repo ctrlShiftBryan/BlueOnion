@@ -1,9 +1,9 @@
 ﻿using BlueOnion.ViewModel.Interfaces;
 using System;
 
-namespace BlueOnion.ViewModel.Dto
+namespace BlueOnion.ViewModel
 {
-    public class PageInfoDto : DTOBase, IDto<Guid>
+    public class PageInfoDto : DtoBase, IDto<Guid>
     {
         public Guid Id { get; set; }
         public int PageCount { get; set; }

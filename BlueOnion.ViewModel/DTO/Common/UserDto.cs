@@ -1,4 +1,4 @@
-﻿namespace BlueOnion.ViewModel.Dto
+﻿namespace BlueOnion.ViewModel
 {
     public class UserDto
     {

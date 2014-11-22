@@ -1,6 +1,5 @@
 ﻿
 using BlueOnion.ViewModel.Common;
-using BlueOnion.ViewModel.Dto;
 using BlueOnion.ViewModel.Interfaces;
 using System.Collections.Generic;
 

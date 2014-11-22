@@ -1,7 +1,6 @@
 ﻿
 using BlueOnion.Domain.Interfaces;
 using BlueOnion.ViewModel.Common;
-using BlueOnion.ViewModel.Dto;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -25,12 +24,12 @@ namespace BlueOnion.ViewModel
             FormControlClasses = "form-group col-sm-6 col-md-4 col-lg-3";
             _canDelete = true;
             //User = new Use();
-            var manageSubNav = new List<NavigationItemDto>
-            {
-                new NavigationItemDto { DisplayName = "Address", CssClass = "", Url = "/HiltonWebPim2014/DedupAddress"},
-                new NavigationItemDto { DisplayName = "Individuals", CssClass = "", Url = "/HiltonWebPim2014/DedupContactsIndividualNameDuplicate" },
-                new NavigationItemDto { DisplayName = "Entities", CssClass = "", Url = "/HiltonWebPim2014/DuplicateEntity"},
-            };
+            //var manageSubNav = new List<NavigationItemDto>
+            //{
+            //    new NavigationItemDto { DisplayName = "Address", CssClass = "", Url = "/HiltonWebPim2014/DedupAddress"},
+            //    new NavigationItemDto { DisplayName = "Individuals", CssClass = "", Url = "/HiltonWebPim2014/DedupContactsIndividualNameDuplicate" },
+            //    new NavigationItemDto { DisplayName = "Entities", CssClass = "", Url = "/HiltonWebPim2014/DuplicateEntity"},
+            //};
 
             //NavigationItemDto authenticationNavItem;
             //if (HttpContext.Current.User.Identity.IsAuthenticated)
