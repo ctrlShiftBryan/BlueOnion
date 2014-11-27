@@ -10,11 +10,6 @@ namespace BlueOnion.Repository
     {
         public virtual DbSet<User> Users { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Properties<string>().Configure(c => c.HasMaxLength(255));
 
-            modelBuilder.Entity<UserRole>().HasKey(u => new { u.RoleId, u.UserId });
-        }
     }
 }
