@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AutoMapper\Mappings\" />
+    <Folder Include="Interfaces\Repositories\" />
     <Folder Include="Interfaces\Services\" />
   </ItemGroup>
   <ItemGroup>

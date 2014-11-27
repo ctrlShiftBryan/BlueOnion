@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
-  <scaffold project="Domain" file="Interfaces\Repository\I{modelName}Repository" template="Domain.IRepository" />
-  <scaffold project="Domain" file="Interfaces\IRepositoriesWrapper" template="Domain.IRepositoryWrapper" />
+  <scaffold project="BlueOnion.ViewModel" file="Interfaces\Repositories\I{modelName}Repository" template="ViewModel.IRepository" />
+  <!--<scaffold project="Domain" file="Interfaces\IRepositoriesWrapper" template="Domain.IRepositoryWrapper" />
 
   <scaffold project="ViewModel" file="Interfaces\Services\Query\I{modelName}ViewModelQueryService" template="ViewModel.IViewModelQueryService" />
   <scaffold project="ViewModel" file="Interfaces\Services\Command\I{modelName}ViewModelCommandService" template="ViewModel.IViewModelCommandService" />
@@ -35,6 +35,6 @@
   <scaffold project="MVC" file="Views\{modelName}\Index" template="MVC.View.Index" />
   <scaffold project="MVC" file="Views\{modelName}\Index" template="MVC.View.Index" />
   <scaffold project="MVC" file="Views\{modelName}\Form" template="MVC.View.Form" />
-  <scaffold project="MVC" file="Views\Shared\MenuItems" template="MVC.View.MenuItems" />
+  <scaffold project="MVC" file="Views\Shared\MenuItems" template="MVC.View.MenuItems" />-->
 
 </configuration>
