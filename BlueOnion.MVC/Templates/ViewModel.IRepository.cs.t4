@@ -14,8 +14,8 @@ using BlueOnion.Domain.Model;
 using System;
 namespace BlueOnion.ViewModel.Interfaces
 {
-    public interface I<#= Model.Name #>Repository : IRepository<<#= Model.Name #>, Guid>
+    public interface I<#= Model.Name #>Repository : IRepository<<#= Model.Name #>, <#= Model.GetIdType() #>>
     {
-
+	
     }
 }
