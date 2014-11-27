@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <scaffold project="BlueOnion.ViewModel" file="Interfaces\Repositories\I{modelName}Repository" template="ViewModel.IRepository" />
-  <!--<scaffold project="Domain" file="Interfaces\IRepositoriesWrapper" template="Domain.IRepositoryWrapper" />
+  <scaffold project="BlueOnion.ViewModel" file="Interfaces\IRepositoriesWrapper" template="ViewModel.IRepositoryWrapper" />
 
-  <scaffold project="ViewModel" file="Interfaces\Services\Query\I{modelName}ViewModelQueryService" template="ViewModel.IViewModelQueryService" />
+  <!--<scaffold project="ViewModel" file="Interfaces\Services\Query\I{modelName}ViewModelQueryService" template="ViewModel.IViewModelQueryService" />
   <scaffold project="ViewModel" file="Interfaces\Services\Command\I{modelName}ViewModelCommandService" template="ViewModel.IViewModelCommandService" />
 
   <scaffold project="ViewModel" file="Interfaces\Services\Domain\Query\I{modelName}QueryService" template="ViewModel.IDomainQueryService" />

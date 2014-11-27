@@ -225,6 +225,7 @@
     <Content Include="Templates\Archive\ViewModel.Mapping.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.MappingConfig.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.ViewModel.cs.t4" />
+    <Content Include="Templates\ViewModel.IRepositoryWrapper.cs.t4" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
