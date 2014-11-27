@@ -1,0 +1,31 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="Microsoft.AspNet.Scaffolding.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="EnvDTE" #>
+<#// assembly name="C:\Code\scaffold-net\DTNetScaffolder\DTNetScaffolder\bin\Debug\DTNetScaffolder.dll" #>
+<#@ import namespace="EnvDTE" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ parameter name="Model" type="DTNetScaffolder.TemplateViewModel" #>
+<#@ Output Extension=".cshtml" #>
+
+@model  <#= Model.Name #>ViewModel
+<div class="form-body">
+    <!-- ko with: ItemDetail-->
+    @using (Html.BeginForm("Index", "<#= Model.Name #>", FormMethod.Post, new { id = "item-detail-form", @class = "" }))
+    {
+	 <div class="row default-col">
+
+            <div class="col-sm-12"><h2><#= Model.Name #></h2></div>
+            	<#
+		foreach (var p in Model.Meta.Properties)
+		{
+	#>				@Html.EditorFor(model => model.ItemDetail.<#= p.PropertyName #>)
+				
+	<#
+		}
+	#>
+	 </div>
+    }
+    <!-- /ko -->
+</div>

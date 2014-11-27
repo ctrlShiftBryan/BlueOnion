@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <scaffold project="Domain" file="Interfaces\Repository\I{modelName}Repository" template="Domain.IRepository" />
+  <scaffold project="Domain" file="Interfaces\IRepositoriesWrapper" template="Domain.IRepositoryWrapper" />
+
+  <scaffold project="ViewModel" file="Interfaces\Services\Query\I{modelName}ViewModelQueryService" template="ViewModel.IViewModelQueryService" />
+  <scaffold project="ViewModel" file="Interfaces\Services\Command\I{modelName}ViewModelCommandService" template="ViewModel.IViewModelCommandService" />
+
+  <scaffold project="ViewModel" file="Interfaces\Services\Domain\Query\I{modelName}QueryService" template="ViewModel.IDomainQueryService" />
+  <scaffold project="ViewModel" file="Interfaces\Services\Domain\Command\I{modelName}CommandService" template="ViewModel.IDomainCommandService" />
+
+  <scaffold project="ViewModel" file="ViewModels\{modelName}ViewModel" template="ViewModel.ViewModel" />
+  <scaffold project="ViewModel" file="DTO\{modelName}\{modelName}DTO" template="ViewModel.DTO.Summary" />
+  <scaffold project="ViewModel" file="DTO\{modelName}\{modelName}DetailDTO" template="ViewModel.DTO.Detail" />
+  <scaffold project="ViewModel" file="Automapper\ConfigMapperPartial" template="ViewModel.MappingConfig" />
+  <scaffold project="ViewModel" file="Automapper\Mappings\{modelName}Mapping" template="ViewModel.Mapping" />
+  <scaffold project="ViewModel" file="Interfaces\IViewModelServices" template="ViewModel.IViewModelServices" />
+  <scaffold project="ViewModel" file="Interfaces\IDomainServices" template="ViewModel.IDomainServices" />
+
+  <scaffold project="Service" file="ViewModelServices" template="Service.ViewModelServices" />
+  <scaffold project="Service" file="DomainServices" template="Service.DomainServices" />
+  <scaffold project="Service" file="ViewModel\Query\{modelName}ViewModelQueryService" template="Service.ViewModelQueryService" />
+  <scaffold project="Service" file="ViewModel\Command\{modelName}ViewModelCommandService" template="Service.ViewModelCommandService" />
+  
+  <scaffold project="Service" file="Domain\Query\{modelName}QueryService" template="Service.DomainQueryService" />
+  <scaffold project="Service" file="Domain\Command\{modelName}CommandService" template="Service.DomainCommandService" />
+  <scaffold project="Service" file="RepositoriesWrapper" template="Service.RepositoriesWrapper" />
+  
+  <scaffold project="Repository" file="Repositories\{modelName}Repository" template="Repository.Repository" />
+
+  <scaffold project="MVC" file="App_Start\UnityConfigPartial" template="MVC.UnityConfigPartial" />
+  <scaffold project="MVC" file="Controllers\{modelName}Controller" template="MVC.Controller" />
+  <scaffold project="MVC" file="Controllers\WebApi\{modelName}Controller" template="MVC.WebApiController" />
+  <scaffold project="MVC" file="Scripts\app\{modelName}\{modelName}" template="MVC.JSModule" />
+  <scaffold project="MVC" file="Views\{modelName}\Index" template="MVC.View.Index" />
+  <scaffold project="MVC" file="Views\{modelName}\Index" template="MVC.View.Index" />
+  <scaffold project="MVC" file="Views\{modelName}\Form" template="MVC.View.Form" />
+  <scaffold project="MVC" file="Views\Shared\MenuItems" template="MVC.View.MenuItems" />
+
+</configuration>

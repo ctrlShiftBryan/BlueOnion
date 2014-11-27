@@ -1,0 +1,36 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="EnvDTE" #>
+<#// assembly name="C:\Code\scaffold-net\DTNetScaffolder\DTNetScaffolder\bin\Debug\DTNetScaffolder.dll" #>
+<#@ import namespace="EnvDTE" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ parameter name="Model" type="DTNetScaffolder.TemplateViewModel" #>
+<#@ Output Extension=".cshtml" #>
+
+@model  <#= Model.Name #>ViewModel
+@{
+    ViewBag.Title = "Index";
+}
+@Html.Partial("ListHeader")
+<table class="table table-striped" id="listtable" style="background-color: #FFF"></table>
+@section Dialog
+{
+    @Html.Partial("Form")
+}
+@section Scripts
+{
+    <script type="text/javascript">
+        window.appnamespace = 'dtnet';
+        (function(acrl, $) {
+           
+            window[window.appnamespace].data =  @Html.Raw(Model.ToJson());
+            //docready
+            $(function (){
+                require(['<#= Model.Name #>'], function(<#= Model.Name.ToLower() #>) {
+                    <#= Model.Name.ToLower() #>.init(window[window.appnamespace].data );
+                });
+            });
+        }( window[window.appnamespace] = window[window.appnamespace] || {}, jQuery ));
+    </script>
+}
