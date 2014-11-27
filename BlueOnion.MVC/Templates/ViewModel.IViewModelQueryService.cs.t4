@@ -10,9 +10,9 @@
 // class: <#= Model.Name #>
 using System;
 using System.Web.Http.OData.Query;
-using Domain.Model;
+using BlueOnion.Domain.Model;
 
-namespace ViewModel.Interfaces
+namespace BlueOnion.ViewModel.Interfaces
 {
     public interface I<#= Model.Name #>ViewModelQueryService : IServiceBase
     {

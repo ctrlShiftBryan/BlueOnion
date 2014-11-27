@@ -220,7 +220,7 @@
     <Content Include="Templates\Archive\ViewModel.IDomainQueryService.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.IDomainServices.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.IViewModelCommandService.cs.t4" />
-    <Content Include="Templates\Archive\ViewModel.IViewModelQueryService.cs.t4" />
+    <Content Include="Templates\ViewModel.IViewModelQueryService.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.IViewModelServices.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.Mapping.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.MappingConfig.cs.t4" />

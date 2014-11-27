@@ -3,8 +3,8 @@
   <scaffold project="BlueOnion.ViewModel" file="Interfaces\Repositories\I{modelName}Repository" template="ViewModel.IRepository" />
   <scaffold project="BlueOnion.ViewModel" file="Interfaces\IRepositoriesWrapper" template="ViewModel.IRepositoryWrapper" />
 
-  <!--<scaffold project="ViewModel" file="Interfaces\Services\Query\I{modelName}ViewModelQueryService" template="ViewModel.IViewModelQueryService" />
-  <scaffold project="ViewModel" file="Interfaces\Services\Command\I{modelName}ViewModelCommandService" template="ViewModel.IViewModelCommandService" />
+  <scaffold project="BlueOnion.ViewModel" file="Interfaces\Services\Query\I{modelName}ViewModelQueryService" template="ViewModel.IViewModelQueryService" />
+  <!--<scaffold project="ViewModel" file="Interfaces\Services\Command\I{modelName}ViewModelCommandService" template="ViewModel.IViewModelCommandService" />
 
   <scaffold project="ViewModel" file="Interfaces\Services\Domain\Query\I{modelName}QueryService" template="ViewModel.IDomainQueryService" />
   <scaffold project="ViewModel" file="Interfaces\Services\Domain\Command\I{modelName}CommandService" template="ViewModel.IDomainCommandService" />
