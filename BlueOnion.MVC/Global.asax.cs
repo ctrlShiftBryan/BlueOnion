@@ -1,4 +1,4 @@
-﻿using BlueOnion.Repository.Common;
+﻿using BlueOnion.Repository;
 using BlueOnion.ViewModel.AutoMapper;
 using BlueOnion.ViewModel.Interfaces;
 using System;

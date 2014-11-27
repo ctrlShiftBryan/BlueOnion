@@ -1,6 +1,7 @@
 ﻿
 using BlueOnion.Domain.Interfaces;
 using BlueOnion.MVC.Common;
+using BlueOnion.Repository;
 using BlueOnion.Repository.Common;
 using BlueOnion.Repository.Interfaces;
 using BlueOnion.Service;

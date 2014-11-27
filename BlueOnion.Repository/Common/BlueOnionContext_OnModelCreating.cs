@@ -1,6 +1,7 @@
-﻿using System.Data.Entity;
+﻿using BlueOnion.Domain.Model;
+using System.Data.Entity;
 
-namespace BlueOnion.Repository.Common
+namespace BlueOnion.Repository
 {
     /// <summary>
     /// A partial to keep on model creating only
@@ -9,7 +10,9 @@ namespace BlueOnion.Repository.Common
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Properties<string>().Configure(c => c.HasMaxLength(255));
 
+            modelBuilder.Entity<UserRole>().HasKey(u => new { u.RoleId, u.UserId });
         }
     }
 }

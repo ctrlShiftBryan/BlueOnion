@@ -1,12 +1,12 @@
 ﻿
+using BlueOnion.Domain.Interfaces;
+using BlueOnion.Domain.Model;
+using BlueOnion.Repository;
+using BlueOnion.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
-using BlueOnion.Domain.Interfaces;
-using BlueOnion.Domain.Model;
-using BlueOnion.Repository.Common;
-using BlueOnion.Repository.Interfaces;
 
 namespace BlueOnion.MVC.Common
 {
