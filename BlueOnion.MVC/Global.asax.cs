@@ -19,13 +19,15 @@ namespace BlueOnion.MVC
         void Application_Start(object sender, EventArgs e)
         {
             AreaRegistration.RegisterAllAreas();
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+
             //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             UnityConfig.RegisterComponents();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             ConfigMapper.MapAll();
-            Database.SetInitializer<BlueOnionContext>(null); ;           
+            Database.SetInitializer<BlueOnionContext>(null);
+           
         }
 
         protected void Application_PostAuthenticateRequest(Object sender, EventArgs e)

@@ -42,10 +42,10 @@
 }
 @helper RenderOptions()
 {
-    var items = (SelectListDTO)Html.GetPageHelper().ViewData["options"];
+    var items = (SelectListDto)Html.GetPageHelper().ViewData["options"];
     if (items != null && items.Items != null && items.Items.Count() > 0)
     {
-        foreach (var option in ((SelectListDTO)Html.GetPageHelper().ViewData["options"]).Items)
+        foreach (var option in ((SelectListDto)Html.GetPageHelper().ViewData["options"]).Items)
         {
             <option value="@option.Value" @(option.Selected ? "selected=selected" : "")>@option.Text</option>
         }

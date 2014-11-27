@@ -169,7 +169,7 @@
     <Compile Include="Controllers\Base\NoAuthBaseController.cs" />
     <Compile Include="Controllers\Base\ODataControllerBase.cs" />
     <Compile Include="Controllers\Base\WebApiBase.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Filters\AuthorizationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
