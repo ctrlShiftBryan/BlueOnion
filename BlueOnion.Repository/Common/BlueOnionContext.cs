@@ -11,5 +11,6 @@ namespace BlueOnion.Repository
         public virtual DbSet<User> Users { get; set; }
 
 
+
     }
 }

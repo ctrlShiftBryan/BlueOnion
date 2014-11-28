@@ -102,7 +102,7 @@
   <ItemGroup>
     <Folder Include="AutoMapper\Mappings\" />
     <Folder Include="Interfaces\Repositories\" />
-    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Interfaces\Services\Query\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlueOnion.Domain\BlueOnion.Domain.csproj">
