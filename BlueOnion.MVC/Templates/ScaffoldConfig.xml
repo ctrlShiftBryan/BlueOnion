@@ -9,10 +9,11 @@
   <scaffold project="ViewModel" file="Interfaces\Services\Domain\Query\I{modelName}QueryService" template="ViewModel.IDomainQueryService" />
   <scaffold project="ViewModel" file="Interfaces\Services\Domain\Command\I{modelName}CommandService" template="ViewModel.IDomainCommandService" />
 
-  <!--<scaffold project="ViewModel" file="ViewModels\{modelName}ViewModel" template="ViewModel.ViewModel" />
-  <scaffold project="ViewModel" file="DTO\{modelName}\{modelName}DTO" template="ViewModel.DTO.Summary" />
-  <scaffold project="ViewModel" file="DTO\{modelName}\{modelName}DetailDTO" template="ViewModel.DTO.Detail" />
-  <scaffold project="ViewModel" file="Automapper\ConfigMapperPartial" template="ViewModel.MappingConfig" />
+  <scaffold project="ViewModel" file="ViewModels\{modelName}ViewModel" template="ViewModel.ViewModel" />
+  <scaffold project="ViewModel" file="Dto\{modelName}\{modelName}Dto" template="ViewModel.Dto.Summary" />
+  <scaffold project="ViewModel" file="Dto\{modelName}\{modelName}DetailDto" template="ViewModel.Dto.Detail" />
+
+  <!--<scaffold project="ViewModel" file="Automapper\ConfigMapperPartial" template="ViewModel.MappingConfig" />
   <scaffold project="ViewModel" file="Automapper\Mappings\{modelName}Mapping" template="ViewModel.Mapping" />
   <scaffold project="ViewModel" file="Interfaces\IViewModelServices" template="ViewModel.IViewModelServices" />
   <scaffold project="ViewModel" file="Interfaces\IDomainServices" template="ViewModel.IDomainServices" />

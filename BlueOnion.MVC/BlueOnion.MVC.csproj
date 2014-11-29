@@ -215,8 +215,8 @@
     <Content Include="Templates\Archive\Service.ViewModelCommandService.cs.t4" />
     <Content Include="Templates\Archive\Service.ViewModelQueryService.cs.t4" />
     <Content Include="Templates\Archive\Service.ViewModelServices.cs.t4" />
-    <Content Include="Templates\Archive\ViewModel.DTO.Detail.cs.t4" />
-    <Content Include="Templates\Archive\ViewModel.DTO.Summary.cs.t4" />
+    <Content Include="Templates\ViewModel.Dto.Detail.cs.t4" />
+    <Content Include="Templates\ViewModel.Dto.Summary.cs.t4" />
     <Content Include="Templates\ViewModel.IDomainCommandService.cs.t4" />
     <Content Include="Templates\ViewModel.IDomainQueryService.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.IDomainServices.cs.t4" />
@@ -224,7 +224,7 @@
     <Content Include="Templates\Archive\ViewModel.IViewModelServices.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.Mapping.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.MappingConfig.cs.t4" />
-    <Content Include="Templates\Archive\ViewModel.ViewModel.cs.t4" />
+    <Content Include="Templates\ViewModel.ViewModel.cs.t4" />
     <Content Include="Templates\ViewModel.IRepositoryWrapper.cs.t4" />
     <Content Include="Templates\ScaffoldHistory.json" />
     <Content Include="Templates\ViewModel.IViewModelCommandService.cs.t4" />

@@ -18,9 +18,9 @@ namespace ViewModel.Mappings
     {
 	    public static void Map()
         {
-			Mapper.CreateMap<<#= Model.Name #>, <#= Model.Name #>DTO>();
-            Mapper.CreateMap<<#= Model.Name #>, <#= Model.Name #>DetailDTO>();
-			Mapper.CreateMap<<#= Model.Name #>DetailDTO, <#= Model.Name #>>();
+			Mapper.CreateMap<<#= Model.Name #>, <#= Model.Name #>Dto>();
+            Mapper.CreateMap<<#= Model.Name #>, <#= Model.Name #>DetailDto>();
+			Mapper.CreateMap<<#= Model.Name #>DetailDto, <#= Model.Name #>>();
 		}
     }
 }

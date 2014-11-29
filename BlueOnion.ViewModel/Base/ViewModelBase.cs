@@ -6,23 +6,23 @@ using System.Collections.Generic;
 
 namespace BlueOnion.ViewModel
 {
-    public abstract class ViewModelBase<DTO, DDTO, TId> : ViewModelNonGenericBase, IViewModelBase<DTO, DDTO, TId>
-        where DTO : class, IDto<TId>, new()
-        where DDTO : class, IDto<TId>, new()
+    public abstract class ViewModelBase<Dto, DDto, TId> : ViewModelNonGenericBase, IViewModelBase<Dto, DDto, TId>
+        where Dto : class, IDto<TId>, new()
+        where DDto : class, IDto<TId>, new()
     {
         public ViewModelBase()
         {
-            List = new List<DTO>();
-            Item = new DTO();
-            ItemDetail = new DDTO();
+            List = new List<Dto>();
+            Item = new Dto();
+            ItemDetail = new DDto();
             PageInfo = new PageInfoDto();
             DefaultEditAction = EditAction = "InsertUpdate";
         }
 
-        public List<DTO> List { get; set; }
+        public List<Dto> List { get; set; }
 
-        public DTO Item { get; set; }
-        public DDTO ItemDetail { get; set; }
+        public Dto Item { get; set; }
+        public DDto ItemDetail { get; set; }
         public PageInfoDto PageInfo { get; set; }
 
         public bool ItemDetailIsNew { get; set; }

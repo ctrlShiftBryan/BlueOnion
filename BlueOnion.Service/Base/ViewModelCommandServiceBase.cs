@@ -10,11 +10,11 @@ using System.Net;
 
 namespace BlueOnion.Service.Base
 {
-    public abstract class ViewModelCommandServiceBase<AR, VM, DTO, DDTO, REPO, TId> : ViewModelServiceBase<AR, VM, DTO, DDTO, TId>
+    public abstract class ViewModelCommandServiceBase<AR, VM, Dto, DDto, REPO, TId> : ViewModelServiceBase<AR, VM, Dto, DDto, TId>
         where AR : class, IAggregateRoot<TId>, new()
-        where VM : IViewModelBase<DTO, DDTO, TId>, new()
-        where DTO : class, IDto<TId>, new()
-        where DDTO : class, IDto<TId>, new()
+        where VM : IViewModelBase<Dto, DDto, TId>, new()
+        where Dto : class, IDto<TId>, new()
+        where DDto : class, IDto<TId>, new()
         where REPO : IRepository<AR, TId>
     {
         protected readonly REPO _repo;

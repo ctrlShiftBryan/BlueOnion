@@ -12,13 +12,13 @@ namespace BlueOnion.Service.Base
     /// </summary>
     /// <typeparam name="AR"></typeparam>
     /// <typeparam name="VM"></typeparam>
-    /// <typeparam name="DTO"></typeparam>
-    /// <typeparam name="DDTO"></typeparam>
-    public class ViewModelQueryServiceBase<AR, VM, DTO, DDTO, REPO, TId> : ViewModelServiceBase<AR, VM, DTO, DDTO, TId>, IGenericQueryService<VM, TId>
+    /// <typeparam name="Dto"></typeparam>
+    /// <typeparam name="DDto"></typeparam>
+    public class ViewModelQueryServiceBase<AR, VM, Dto, DDto, REPO, TId> : ViewModelServiceBase<AR, VM, Dto, DDto, TId>, IGenericQueryService<VM, TId>
         where AR : class, IAggregateRoot<TId>, new()
-        where VM : IViewModelBase<DTO, DDTO, TId>, new()
-        where DTO : class, IDto<TId>, new()
-        where DDTO : class, IDto<TId>, new()
+        where VM : IViewModelBase<Dto, DDto, TId>, new()
+        where Dto : class, IDto<TId>, new()
+        where DDto : class, IDto<TId>, new()
         where REPO : IRepository<AR, TId>
     {
         protected readonly REPO _repo;

@@ -23,7 +23,7 @@ using ViewModel.Interfaces;
 
 namespace Service.Query
 {
-    public class <#= Model.Name #>ViewModelQueryService : ViewModelQueryServiceBase<<#= Model.Name #>, <#= Model.Name #>ViewModel, <#= Model.Name #>DTO, <#= Model.Name #>DetailDTO, I<#= Model.Name #>Repository, Guid>, I<#= Model.Name #>ViewModelQueryService
+    public class <#= Model.Name #>ViewModelQueryService : ViewModelQueryServiceBase<<#= Model.Name #>, <#= Model.Name #>ViewModel, <#= Model.Name #>Dto, <#= Model.Name #>DetailDto, I<#= Model.Name #>Repository, Guid>, I<#= Model.Name #>ViewModelQueryService
     {
         public <#= Model.Name #>ViewModelQueryService(IUnitOfWork unitOfWork, IUser user, IRepositoriesWrapper repositories, IDomainServices domainServices) 
 			: base(unitOfWork, user, repositories, repositories.<#= Model.Name #>Repository, domainServices, 1000)
@@ -54,8 +54,8 @@ namespace Service.Query
             };
 
             var listWithPageInfo = _repo.GetPage(parameters);
-            vm.List = Mapper.Map<List<<#= Model.Name #>DTO>>(listWithPageInfo.List);
-            vm.PageInfo = Mapper.Map<PageInfoDTO>(listWithPageInfo.PageInfo);
+            vm.List = Mapper.Map<List<<#= Model.Name #>Dto>>(listWithPageInfo.List);
+            vm.PageInfo = Mapper.Map<PageInfoDto>(listWithPageInfo.PageInfo);
 			
             return vm;
         }

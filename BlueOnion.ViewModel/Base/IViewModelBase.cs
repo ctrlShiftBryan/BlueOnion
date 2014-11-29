@@ -7,17 +7,17 @@ using System.Collections.Generic;
 
 namespace BlueOnion.ViewModel
 {
-    public interface IViewModelBase<DTO, DDTO, TId>
-        where DTO : class, IDto<TId>
-        where DDTO : class, IDto<TId>
+    public interface IViewModelBase<Dto, DDto, TId>
+        where Dto : class, IDto<TId>
+        where DDto : class, IDto<TId>
     {
-        List<DTO> List { get; set; }
+        List<Dto> List { get; set; }
         SimpleModelState ModelState { get; set; }
         int StatusCode { get; set; }
         string RedirectResponse { get; set; }
         string Message { get; set; }
-        DTO Item { get; set; }
-        DDTO ItemDetail { get; set; }
+        Dto Item { get; set; }
+        DDto ItemDetail { get; set; }
         List<string> Meta { get; set; }
         List<ColumnData> Columns { get; }
         KOMapping KOMapping { get; set; }

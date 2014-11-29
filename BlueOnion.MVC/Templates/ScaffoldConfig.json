@@ -57,6 +57,21 @@
                 "Project": "BlueOnion.ViewModel",
                 "File": "Interfaces\\Services\\Command\\I{modelName}CommandService",
                 "Template": "ViewModel.IDomainCommandService"
+            },
+            {
+                "Project": "BlueOnion.ViewModel",
+                "File": "ViewModels\\{modelName}ViewModel",
+                "Template": "ViewModel.ViewModel"
+            },
+            {
+                "Project": "BlueOnion.ViewModel",
+                "File": "Dto\\{modelName}\\{modelName}Dto",
+                "Template": "ViewModel.Dto.Summary"
+            },
+            {
+                "Project": "BlueOnion.ViewModel",
+                "File": "Dto\\{modelName}\\{modelName}DetailDto",
+                "Template": "ViewModel.Dto.Detail"
             }
         ]
     }

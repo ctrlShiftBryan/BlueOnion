@@ -10,9 +10,9 @@
 // class: <#= Model.Name #>
 using System;
 
-namespace ViewModel
+namespace BlueOnion.ViewModel
 {
-	public class <#= Model.Name #>ViewModel : ViewModelBase<<#= Model.Name #>DTO, <#= Model.Name #>DetailDTO, Guid>
+	public class <#= Model.Name #>ViewModel : ViewModelBase<<#= Model.Name #>Dto, <#= Model.Name #>DetailDto, <#= Model.GetIdType() #>>
     {
 
         public <#= Model.Name #>ViewModel()
@@ -21,9 +21,9 @@ namespace ViewModel
             HasDialog = true;
         }
 		
-		public override Guid GetDefaultIdValue()
+		public override <#= Model.GetIdType() #> GetDefaultIdValue()
         {
-            return Guid.Empty;
+            return new <#= Model.GetIdType() #>();
         }
     }
 }

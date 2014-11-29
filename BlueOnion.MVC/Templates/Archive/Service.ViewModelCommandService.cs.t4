@@ -19,7 +19,7 @@ using ViewModel.Interfaces;
 
 namespace Service.Command
 {
-	public class <#= Model.Name #>ViewModelCommandService : ViewModelCommandServiceBase<<#= Model.Name #>, <#= Model.Name #>ViewModel, <#= Model.Name #>DTO, <#= Model.Name #>DetailDTO, IRepository<<#= Model.Name #>, Guid>, Guid>, I<#= Model.Name #>ViewModelCommandService
+	public class <#= Model.Name #>ViewModelCommandService : ViewModelCommandServiceBase<<#= Model.Name #>, <#= Model.Name #>ViewModel, <#= Model.Name #>Dto, <#= Model.Name #>DetailDto, IRepository<<#= Model.Name #>, Guid>, Guid>, I<#= Model.Name #>ViewModelCommandService
     {
         public <#= Model.Name #>ViewModelCommandService(IUnitOfWork unitOfWork, IUser user, IRepositoriesWrapper repositories, IDomainServices domainServices) 
 			: base(unitOfWork, user, repositories, repositories.<#= Model.Name #>Repository, domainServices)
