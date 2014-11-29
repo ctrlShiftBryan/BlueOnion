@@ -2,14 +2,19 @@
     "configuration": {
         "DbContext": "BlueOnion.Repository.BlueOnionContext",
         "TemplateDir": "Templates",
-        "project": [
+        "Project": [
             {
                 "Name": "BlueOnion.Domain",
-                "NuGetPackage": "BlueOnion.Domain",
-                "NuGetPackageVersion": "1.0.0"
+                "NugetPackage": [
+                    {
+                        "Name": "BlueOnion.Domain",
+                        "Version": "1.0.0"
+                    }
+                ]
             },
             {
                 "Name": "BlueOnion.MVC"
+
             },
             {
                 "Name": "BlueOnion.Repository"
@@ -22,7 +27,7 @@
             }
 
         ],
-        "scaffold": [
+        "Scaffold": [
             {
                 "Project": "BlueOnion.ViewModel",
                 "File": "Interfaces\\Repositories\\I{modelName}Repository",
