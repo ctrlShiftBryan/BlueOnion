@@ -11,8 +11,8 @@
 // template: ViewModel.Dto.Summary.cs
 // class: <#= Model.Name #>
 using System;
-using BlueOnion.Domain.Dto;
-using BlueOnion.ViewModel.Base;
+using BlueOnion.Domain.Model;
+using BlueOnion.ViewModel.Interfaces;
 
 namespace BlueOnion.ViewModel
 {
