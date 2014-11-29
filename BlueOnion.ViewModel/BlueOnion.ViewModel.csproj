@@ -82,7 +82,6 @@
     <Compile Include="DTO\Common\SelectItem\SelectItemDto.cs" />
     <Compile Include="DTO\Common\NavigationItemDto.cs" />
     <Compile Include="DTO\Common\PageInfoDto.cs" />
-    <Compile Include="DTO\Common\UserDto.cs" />
     <Compile Include="Interfaces\IHaveDisplayAndId.cs" />
     <Compile Include="Interfaces\ICommandServiceBase.cs" />
     <Compile Include="Interfaces\IDomainCommandService.cs" />
