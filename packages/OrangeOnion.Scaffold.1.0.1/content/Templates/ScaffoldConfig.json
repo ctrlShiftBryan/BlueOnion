@@ -1,15 +1,20 @@
 ﻿{
     "configuration": {
-        "DbContext": "BlueOnion.Repository.BlueOnionContext",
+        "DbContext" : "BlueOnion.Repository.BlueOnionContext",
         "TemplateDir": "Templates",
-        "project": [
+        "Project": [
             {
                 "Name": "BlueOnion.Domain",
-                "NuGetPackage": "BlueOnion.Domain",
-                "NuGetPackageVersion": "1.0.0"
+                "NugetPackage": [
+                    {
+                        "Name": "BlueOnion.Domain",
+                        "Version": "1.0.0"
+                    }
+                ]
             },
             {
                 "Name": "BlueOnion.MVC"
+
             },
             {
                 "Name": "BlueOnion.Repository"
@@ -22,7 +27,7 @@
             }
 
         ],
-        "scaffold": [
+        "Scaffold": [
             {
                 "Project": "BlueOnion.ViewModel",
                 "File": "Interfaces\\Repositories\\I{modelName}Repository",
@@ -37,21 +42,6 @@
                 "Project": "BlueOnion.ViewModel",
                 "File": "Interfaces\\Services\\Query\\I{modelName}ViewModelQueryService",
                 "Template": "ViewModel.IViewModelQueryService"
-            },
-            {
-                "Project": "BlueOnion.ViewModel",
-                "File": "Interfaces\\Services\\Command\\I{modelName}ViewModelCommandService",
-                "Template": "ViewModel.IViewModelCommandService"
-            },
-            {
-                "Project": "BlueOnion.ViewModel",
-                "File": "Interfaces\\Services\\Query\\I{modelName}QueryService",
-                "Template": "ViewModel.IDomainQueryService"
-            },
-            {
-                "Project": "BlueOnion.ViewModel",
-                "File": "Interfaces\\Services\\Command\\I{modelName}CommandService",
-                "Template": "ViewModel.IDomainCommandService"
             }
         ]
     }

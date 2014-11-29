@@ -217,10 +217,9 @@
     <Content Include="Templates\Archive\Service.ViewModelServices.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.DTO.Detail.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.DTO.Summary.cs.t4" />
-    <Content Include="Templates\Archive\ViewModel.IDomainCommandService.cs.t4" />
-    <Content Include="Templates\Archive\ViewModel.IDomainQueryService.cs.t4" />
+    <Content Include="Templates\ViewModel.IDomainCommandService.cs.t4" />
+    <Content Include="Templates\ViewModel.IDomainQueryService.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.IDomainServices.cs.t4" />
-    <Content Include="Templates\Archive\ViewModel.IViewModelCommandService.cs.t4" />
     <Content Include="Templates\ViewModel.IViewModelQueryService.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.IViewModelServices.cs.t4" />
     <Content Include="Templates\Archive\ViewModel.Mapping.cs.t4" />
@@ -228,6 +227,7 @@
     <Content Include="Templates\Archive\ViewModel.ViewModel.cs.t4" />
     <Content Include="Templates\ViewModel.IRepositoryWrapper.cs.t4" />
     <Content Include="Templates\ScaffoldHistory.json" />
+    <Content Include="Templates\ViewModel.IViewModelCommandService.cs.t4" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

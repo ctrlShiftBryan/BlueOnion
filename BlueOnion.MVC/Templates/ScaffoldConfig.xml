@@ -4,12 +4,12 @@
   <scaffold project="BlueOnion.ViewModel" file="Interfaces\IRepositoriesWrapper" template="ViewModel.IRepositoryWrapper" />
 
   <scaffold project="BlueOnion.ViewModel" file="Interfaces\Services\Query\I{modelName}ViewModelQueryService" template="ViewModel.IViewModelQueryService" />
-  <!--<scaffold project="ViewModel" file="Interfaces\Services\Command\I{modelName}ViewModelCommandService" template="ViewModel.IViewModelCommandService" />
+  <scaffold project="ViewModel" file="Interfaces\Services\Command\I{modelName}ViewModelCommandService" template="ViewModel.IViewModelCommandService" />
 
   <scaffold project="ViewModel" file="Interfaces\Services\Domain\Query\I{modelName}QueryService" template="ViewModel.IDomainQueryService" />
   <scaffold project="ViewModel" file="Interfaces\Services\Domain\Command\I{modelName}CommandService" template="ViewModel.IDomainCommandService" />
 
-  <scaffold project="ViewModel" file="ViewModels\{modelName}ViewModel" template="ViewModel.ViewModel" />
+  <!--<scaffold project="ViewModel" file="ViewModels\{modelName}ViewModel" template="ViewModel.ViewModel" />
   <scaffold project="ViewModel" file="DTO\{modelName}\{modelName}DTO" template="ViewModel.DTO.Summary" />
   <scaffold project="ViewModel" file="DTO\{modelName}\{modelName}DetailDTO" template="ViewModel.DTO.Detail" />
   <scaffold project="ViewModel" file="Automapper\ConfigMapperPartial" template="ViewModel.MappingConfig" />
